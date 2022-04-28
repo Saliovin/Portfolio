@@ -1,0 +1,254 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  --base-text-color: #031926;
+  --primary-color: #ffa552;
+  --off-primary-color: #ffcc9d;
+  --secondary-color: #8c86aa;
+  --tertiary-color: #2e86ab;
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  color: var(--base-text-color);
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.3em;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+ul li a {
+  display: block;
+  position: relative;
+  color: var(--base-text-color);
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  background-color: var(--base-text-color);
+  width: 0;
+  height: 0.1em;
+  opacity: 0;
+  transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    right 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ul a:hover {
+  transform: scale(1.1);
+  backface-visibility: hidden;
+}
+ul a:hover::after {
+  width: 100%;
+  right: 0;
+  opacity: 1;
+}
+
+button {
+  position: relative;
+  font-family: inherit;
+  font-size: 100%;
+  background: none;
+  border-style: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.baseFlex {
+  display: flex;
+  align-items: center;
+}
+
+.marginCenter {
+  max-width: min(80vw, 1080px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regularFont {
+  font-weight: normal;
+}
+
+.smallFont {
+  font-size: 0.6em;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.baseButton {
+  font-weight: bold;
+  color: var(--base-text-color);
+  border-radius: 0.3em;
+  width: 10em;
+  padding: 0.4em 1.5em;
+}
+.baseButton:hover {
+  background-color: var(--tertiary-color);
+  color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.baseButton::after {
+  content: "";
+  position: absolute;
+  left: 0.15em;
+  top: 0.15em;
+  width: 100%;
+  height: 100%;
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 0.08em;
+  border-radius: 0.3em;
+  padding: 0.8em;
+}
+.baseButton::before {
+  content: "";
+  position: absolute;
+  left: -0.15em;
+  top: -0.15em;
+  width: 100%;
+  height: 100%;
+  border-color: var(--tertiary-color);
+  border-style: solid;
+  border-width: 0.08em;
+  border-radius: 0.3em;
+  padding: 0.8em;
+}
+
+.smallBtn {
+  width: 8em;
+}
+
+.navbar,
+.nav {
+  justify-content: space-between;
+}
+.navbar-wrapper {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to top, #ffffff00, #ffffff 80%);
+  font-size: 20px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  z-index: 1;
+}
+.nav {
+  width: 25vw;
+  min-width: 300px;
+}
+
+.iconButtons {
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+.iconButtons img {
+  padding-right: 0.8em;
+}
+
+#home {
+  justify-content: space-around;
+}
+.devImage {
+  position: relative;
+}
+.devImage > img {
+  position: absolute;
+  top: -3em;
+  z-index: -1;
+}
+.secondarySection {
+  padding-bottom: 5em;
+}
+
+#projects {
+  flex-direction: column;
+  padding-top: 5em;
+}
+.projectList {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: var(--primary-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.5em;
+  width: 400px;
+  margin-top: 2em;
+  overflow: hidden;
+}
+.cardImg {
+  height: 10em;
+  overflow: hidden;
+}
+.cardDesc {
+  height: 5em;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.cardDetail {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+.cardButtons > button {
+  width: 50%;
+  font-size: 0.8em;
+  border: none;
+  background-color: #ffcc9d;
+}
+.cardButtons > button:hover {
+  background-color: #e6aa73;
+}
+
+#contact {
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.contactSet {
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}
+.contactSetButton {
+  flex-direction: column;
+}
+
+.footer {
+  position: absolute;
+  bottom: 2vh;
+}
+.footerText {
+  font-size: 0.5em;
+  color: var(--secondary-color);
+  text-align: center;
+}

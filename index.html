@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navbar-wrapper">
+      <nav class="navbar baseFlex marginCenter">
+        <img src="/assets/Logo.svg" height="30px" />
+        <ul class="nav baseFlex">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </nav>
+    <div class="marginCenter">
+      <section id="home" class="baseFlex">
+        <div class="mainSection">
+          <h1 class="regularFont">Hi!</h1>
+          <h1 class="regularFont">I'm Jonas</h1>
+          <h1 class="primary">DEVELOPER</h1>
+          <div class="iconButtons">
+            <img src="/assets/iconmonstr-github-3.svg" height="50px" />
+            <img src="/assets/iconmonstr-linkedin-3.svg" height="50px" />
+          </div>
+          <div class="baseFlex">
+            <button class="baseButton" style="margin-right: 1em">
+              My Resume
+            </button>
+            <button class="baseButton">Contact Me</button>
+          </div>
+        </div>
+        <div class="secondarySection">
+          <h3 class="regularFont">Things I Know</h3>
+          <div class="appRow">
+            <img src="/assets/icons8-sass.svg" height="70px" />
+            <img src="/assets/icons8-html-5.svg" height="70px" />
+            <img src="/assets/icons8-react.svg" height="70px" />
+            <img src="/assets/icons8-nodejs.svg" height="70px" />
+          </div>
+          <div class="appRow">
+            <img src="/assets/icons8-python.svg" height="70px" />
+            <img src="/assets/icons8-javascript.svg" height="70px" />
+            <img src="/assets/icons8-typescript.svg" height="70px" />
+          </div>
+          <div class="appRow">
+            <img src="/assets/icons8-amazon-web-services.svg" height="60px" />
+            <img src="/assets/icons8-firebase.svg" height="70px" />
+          </div>
+          <div class="devImage">
+            <img src="/assets/dev.svg" height="300px" />
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="baseFlex">
+        <h3 class="regularFont">Things I Made</h3>
+        <div class="projectList baseFlex">
+          <div class="card">
+            <div class="cardImg">
+              <img
+                src="/assets/Screenshot 2022-04-20 181525.png"
+                height="500px"
+              />
+            </div>
+            <div class="cardDesc baseFlex">
+              <div class="cardTitle">React Calculator</div>
+              <div class="smallFont cardDetail">
+                A simple calculator with dark-mode toggle
+              </div>
+            </div>
+            <div class="cardButtons baseFlex">
+              <button>CODE</button>
+              <button>DEMO</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="baseFlex">
+        <h2>Like What You See?</h2>
+        <h2 class="primary">Send Me a Message</h2>
+        <div class="contactSet baseFlex">
+          <div class="contactSetButton baseFlex">
+            <h3 class="regularFont">Email</h3>
+            <button class="smallBtn baseButton">Say Hello</button>
+          </div>
+          <div class="contactSetButton baseFlex">
+            <h3 class="regularFont">LinkedIn</h3>
+            <button class="smallBtn baseButton">Say Hi</button>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="footerText">Built and Designed by Jonas Eukan</div>
+          <div class="footerText">HTML + CSS</div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
