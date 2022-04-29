@@ -82,6 +82,67 @@ button:hover {
   cursor: pointer;
 }
 
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  25% {
+    transform: translateY(-0.1em) rotate(1deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-0.2em);
+    animation-timing-function: ease-in;
+  }
+  75% {
+    transform: translateY(-0.1em) rotate(-1deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: linear;
+  }
+}
+
+.slideUp {
+  animation-name: slide-up;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+}
+.slideDown {
+  animation-name: slide-down;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+}
+.float {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
 .baseFlex {
   display: flex;
   align-items: center;
@@ -251,4 +312,8 @@ button:hover {
   font-size: 0.5em;
   color: var(--secondary-color);
   text-align: center;
+}
+
+.anim {
+  opacity: 0;
 }
