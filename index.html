@@ -13,15 +13,20 @@
     />
     <link rel="stylesheet" href="index.css" />
     <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0eee771627.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <nav class="anim down navbar-wrapper">
       <nav class="navbar baseFlex marginCenter">
-        <img src="/assets/Logo.svg" height="30px" />
+        <img src="/assets/Logo.svg" class="theme" height="30px" />
         <ul class="nav baseFlex">
           <li><a href="#home">HOME</a></li>
           <li><a href="#projects">PROJECTS</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li><i class="fa-solid fa-moon" onclick="toggleTheme()"></i></li>
         </ul>
       </nav>
     </nav>
@@ -33,10 +38,18 @@
           <h1 class="float primary">DEVELOPER</h1>
           <div class="iconButtons">
             <a href="https://github.com/Saliovin">
-              <img src="/assets/iconmonstr-github-3.svg" height="50px" />
+              <img
+                src="/assets/iconmonstr-github-3.svg"
+                class="theme"
+                height="50px"
+              />
             </a>
             <a href="https://www.linkedin.com/in/earvin-jonas">
-              <img src="/assets/iconmonstr-linkedin-3.svg" height="50px" />
+              <img
+                src="/assets/iconmonstr-linkedin-3.svg"
+                class="theme"
+                height="50px"
+              />
             </a>
           </div>
           <div class="baseFlex">
@@ -58,7 +71,7 @@
             <img src="/assets/icons8-css3.svg" height="70px" />
             <img src="/assets/icons8-html-5.svg" height="70px" />
             <img src="/assets/icons8-react.svg" height="70px" />
-            <img src="/assets/icons8-nodejs.svg" height="70px" />
+            <img src="/assets/icons8-nodejs.svg" class="theme" height="70px" />
           </div>
           <div class="appRow">
             <img src="/assets/icons8-python.svg" height="70px" />
@@ -66,11 +79,15 @@
             <img src="/assets/icons8-typescript.svg" height="70px" />
           </div>
           <div class="appRow">
-            <img src="/assets/icons8-amazon-web-services.svg" height="60px" />
+            <img
+              src="/assets/icons8-amazon-web-services.svg"
+              class="theme"
+              height="60px"
+            />
             <img src="/assets/icons8-firebase.svg" height="70px" />
           </div>
           <div class="devImage">
-            <img src="/assets/dev.svg" height="300px" />
+            <img src="/assets/dev.svg" class="theme" height="300px" />
           </div>
         </div>
       </section>
@@ -137,8 +154,8 @@
           </div>
         </div>
         <div class="footer">
-          <div class="footerText">Built and Designed by Jonas Eukan</div>
-          <div class="footerText">HTML + CSS</div>
+          <div class="footerText">Built with HTML + CSS + JS</div>
+          <div class="footerText">Designed with Figma</div>
         </div>
       </section>
     </div>

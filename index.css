@@ -14,11 +14,28 @@ body {
   --base-text-color: #031926;
   --primary-color: #ffa552;
   --off-primary-color: #ffcc9d;
+  --off-primary-color2: #e6aa73;
   --secondary-color: #8c86aa;
   --tertiary-color: #2e86ab;
+  --base-color: #fafafa;
   font-family: "Montserrat", sans-serif;
   font-size: x-large;
   color: var(--base-text-color);
+  background-color: var(--base-color);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body.dark-theme {
+  --base-text-color: #fafafa;
+  --primary-color: #8c86aa;
+  --off-primary-color: #ada8c7;
+  --off-primary-color2: #bfbbd5;
+  --secondary-color: #fafafa;
+  --tertiary-color: #2e86ab;
+  --base-color: #031926;
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
+  color: var(--base-text-color);
+  background-color: var(--base-color);
 }
 
 a {
@@ -84,6 +101,10 @@ button {
   color: var(--base-text-color);
 }
 button:hover {
+  cursor: pointer;
+}
+
+i:hover {
   cursor: pointer;
 }
 
@@ -180,7 +201,7 @@ button:hover {
 }
 .baseButton:hover {
   background-color: var(--tertiary-color);
-  color: #ffffff;
+  color: var(--base-color);
 }
 .baseButton::after {
   content: "";
@@ -220,7 +241,7 @@ button:hover {
 .navbar-wrapper {
   position: fixed;
   width: 100%;
-  background: linear-gradient(to top, #ffffff00, #ffffff 80%);
+  background: linear-gradient(to top, #ffffff00, var(--base-color) 80%);
   font-size: 20px;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -228,7 +249,7 @@ button:hover {
 }
 .nav {
   width: 25vw;
-  min-width: 300px;
+  min-width: 330px;
 }
 
 .iconButtons {
@@ -297,11 +318,11 @@ button:hover {
   height: 1.5em;
   font-size: 0.8em;
   border: none;
-  background-color: #ffcc9d;
+  background-color: var(--off-primary-color);
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .cardButtons > a > button:hover {
-  background-color: #e6aa73;
+  background-color: var(--off-primary-color2);
 }
 
 #contact {
