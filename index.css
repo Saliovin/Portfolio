@@ -179,6 +179,11 @@ i:hover {
   margin-left: auto;
   margin-right: auto;
 }
+@media only screen and (max-width: 1080px) {
+  .marginCenter {
+    max-width: 100vw;
+  }
+}
 
 .regularFont {
   font-weight: normal;
@@ -251,6 +256,12 @@ i:hover {
   width: 25vw;
   min-width: 330px;
 }
+@media only screen and (max-width: 1080px) {
+  .navbar {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
 
 .iconButtons {
   padding-top: 1.5em;
@@ -264,6 +275,21 @@ i:hover {
   transform: scale(1.2);
 }
 
+@media only screen and (max-width: 850px) {
+  #home {
+    flex-direction: column;
+  }
+  .mainSection,
+  .secondarySection,
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+}
 #home {
   justify-content: space-around;
 }
