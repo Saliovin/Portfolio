@@ -261,6 +261,19 @@ i:hover {
     padding-right: 2em;
   }
 }
+@media only screen and (max-width: 1080px) {
+  .navbar,
+  .navbar-wrapper {
+    padding: 0.2em;
+    margin: 0;
+  }
+
+  .nav {
+    display: none;
+  }
+  .nav::before {
+  }
+}
 
 .iconButtons {
   padding-top: 1.5em;
@@ -275,7 +288,8 @@ i:hover {
 }
 
 @media only screen and (max-width: 850px) {
-  body {
+  body,
+  body.dark-theme {
     font-size: 18px;
   }
   #home {
@@ -305,6 +319,12 @@ i:hover {
 }
 .secondarySection {
   padding-bottom: 5em;
+}
+@media only screen and (max-width: 850px) {
+  .devImage,
+  .devImage > img {
+    position: inherit;
+  }
 }
 
 #projects {
