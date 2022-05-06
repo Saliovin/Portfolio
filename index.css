@@ -304,10 +304,21 @@ i:hover {
     justify-content: center;
     text-align: center;
     height: 100vh;
+    min-height: 600px;
+  }
+  .mainSection > .baseFlex {
+    flex-direction: column;
+  }
+  .mainSection > .baseFlex > a > button {
+    margin-right: 0;
+    margin-top: 1em;
   }
 }
 #home {
   justify-content: space-around;
+}
+.mainSection > .baseFlex > a > button {
+  margin-right: 1em;
 }
 .devImage {
   position: relative;
