@@ -12,9 +12,9 @@ html {
 
 body {
   --base-text-color: #031926;
-  --primary-color: #ffa552;
-  --off-primary-color: #ffcc9d;
-  --off-primary-color2: #e6aa73;
+  --primary-color: #ef681a;
+  --off-primary-color: #ff8f4f;
+  --off-primary-color2: #e87b3c;
   --secondary-color: #8c86aa;
   --tertiary-color: #2e86ab;
   --base-color: #fafafa;
@@ -403,7 +403,7 @@ i:hover {
 }
 .footerText {
   font-size: 0.5em;
-  color: var(--secondary-color);
+  color: var(--base-text-color);
   text-align: center;
 }
 
