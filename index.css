@@ -253,7 +253,7 @@ i:hover {
 }
 .nav {
   width: 25vw;
-  min-width: 330px;
+  min-width: 350px;
   margin-right: 1em;
 }
 @media only screen and (max-width: 1080px) {
@@ -268,7 +268,8 @@ i:hover {
     padding: 0.2em;
     margin: 0;
   }
-
+}
+@media only screen and (max-width: 430px) {
   .nav {
     display: none;
   }
