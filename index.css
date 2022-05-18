@@ -362,6 +362,7 @@ i:hover {
   height: 5em;
   justify-content: flex-start;
   flex-direction: column;
+  padding-top: 0.5em;
 }
 .cardDetail {
   margin-top: auto;
