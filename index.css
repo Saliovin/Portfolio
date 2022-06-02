@@ -131,23 +131,12 @@ i:hover {
 @keyframes float {
   0% {
     transform: translateY(0);
-    animation-timing-function: ease-in;
-  }
-  25% {
-    transform: translateY(-0.1em) rotate(1deg);
-    animation-timing-function: ease-out;
   }
   50% {
-    transform: translateY(-0.2em);
-    animation-timing-function: ease-in;
-  }
-  75% {
-    transform: translateY(-0.1em) rotate(-1deg);
-    animation-timing-function: ease-out;
+    transform: translateY(0.2em);
   }
   100% {
     transform: translateY(0);
-    animation-timing-function: linear;
   }
 }
 
@@ -165,7 +154,7 @@ i:hover {
 }
 .float {
   animation-name: float;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
