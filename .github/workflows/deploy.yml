@@ -1,9 +1,12 @@
 name: Deploy
-run-name: ${{ github.actor }} is build in ${{ github.sha }}
-on: [push]
+run-name: ${{ github.actor }} is building ${{ github.sha }}
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
 jobs:
   Deploy:
-    if: github.ref_name == 'master'
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub Action'
@@ -21,3 +24,11 @@ jobs:
           docker build -t portfolio .
           docker tag portfolio:latest ghcr.io/saliovin/portfolio:latest
           docker push ghcr.io/saliovin/portfolio:latest
+      
+      - name: Restarting Docker Compose Through SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: whoami
