@@ -1,0 +1,9 @@
+name: Deploy
+run-name: ${{ github.actor }} is build in ${{ github.sha }}
+on: [push]
+jobs:
+  Deploy:
+    if: github.ref_name == 'master'
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker build -t portfolio .
