@@ -8,3 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t portfolio .
+      - run: docker tag portfolio:latest ghcr.io/Saliovin/portfolio:latest
+      - run: docker push ghcr.io/Saliovin/portfolio:latest
