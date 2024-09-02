@@ -31,4 +31,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          script: sudo docker compose up -d --remove-orphans
+          script: sudo docker compose pull portfolio && sudo docker compose up -d --remove-orphans
