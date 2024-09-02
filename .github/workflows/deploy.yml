@@ -6,7 +6,18 @@ jobs:
     if: github.ref_name == 'master'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: docker build -t portfolio .
-      - run: docker tag portfolio:latest ghcr.io/saliovin/portfolio:latest
-      - run: docker push ghcr.io/saliovin/portfolio:latest
+      - name: 'Checkout GitHub Action'
+        uses: actions/checkout@v4
+
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}
+
+      - name: 'Build and Push Image'
+        run: |
+          docker build -t portfolio .
+          docker tag portfolio:latest ghcr.io/saliovin/portfolio:latest
+          docker push ghcr.io/saliovin/portfolio:latest
